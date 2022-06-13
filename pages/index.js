@@ -1,9 +1,7 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Sidebar from '../components/Sidebar';
 import Feed from '../components/Feed';
 import styles from '../styles/Home.module.css';
-import { async } from '@firebase/util';
 import { getSession, getProviders, useSession } from "next-auth/react";
 import Login from '../components/Login';
 import Modal from '../components/Modal';

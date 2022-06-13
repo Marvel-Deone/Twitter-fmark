@@ -1,10 +1,4 @@
-import {
-    collection,
-    doc,
-    onSnapshot,
-    orderBy,
-    query,
-  } from "@firebase/firestore";
+import { collection, doc, onSnapshot, orderBy, query,} from "@firebase/firestore";
   import { getProviders, getSession, useSession } from "next-auth/react";
   import { useRouter } from "next/router";
   import { useEffect, useState } from "react";
@@ -75,19 +69,12 @@ import Login from "../components/Login";
             {comments.length > 0 && (
               <div className="pb-72">
                 {comments.map((comment) => (
-                  <Comment
-                    key={comment.id}
-                    id={comment.id}
-                    comment={comment.data()}
-                  />
+                  <Comment key={comment.id} id={comment.id} comment={comment.data()}/>
                 ))}
               </div>
             )}
           </div>
-          <Widgets
-            trendingResults={trendingResults}
-            followResults={followResults}
-          />
+          <Widgets trendingResults={trendingResults} followResults={followResults}/>
   
           {isOpen && <Modal />}
         </main>
@@ -108,12 +95,7 @@ import Login from "../components/Login";
     const session = await getSession(context);
   
     return {
-      props: {
-        trendingResults,
-        followResults,
-        providers,
-        session,
-      },
+      props: { trendingResults, followResults, providers, session,},
     };
   }
   
