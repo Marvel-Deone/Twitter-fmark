@@ -3,6 +3,7 @@ import { collection, deleteDoc, doc, onSnapshot, orderBy, query, setDoc, } from 
   } from "@heroicons/react/outline";
   import { HeartIcon as HeartIconFilled, ChatIcon as ChatIconFilled, } from "@heroicons/react/solid";
   import { useSession } from "next-auth/react";
+import Image from "next/image";
   import { useRouter } from "next/router";
   import { useEffect, useState } from "react";
   import Moment from "react-moment";
@@ -64,7 +65,7 @@ import { collection, deleteDoc, doc, onSnapshot, orderBy, query, setDoc, } from 
         onClick={() => router.push(`/${id}`)}
       >
         {!postPage && (
-          <img
+          <Image
             src={post?.userImg}
             alt=""
             className="h-11 w-11 rounded-full mr-4"
@@ -73,7 +74,7 @@ import { collection, deleteDoc, doc, onSnapshot, orderBy, query, setDoc, } from 
         <div className="flex flex-col space-y-2 w-full">
           <div className={`flex ${!postPage && "justify-between"}`}>
             {postPage && (
-              <img
+              <Image
                 src={post?.userImg}
                 alt="Profile Pic"
                 className="h-11 w-11 rounded-full mr-4"
@@ -111,7 +112,7 @@ import { collection, deleteDoc, doc, onSnapshot, orderBy, query, setDoc, } from 
           {postPage && (
             <p className="text-[#d9d9d9] mt-0.5 text-xl">{post?.text}</p>
           )}
-          <img
+          <Image
             src={post?.image}
             alt=""
             className="rounded-2xl max-h-[700px] object-cover mr-2"

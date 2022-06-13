@@ -4,6 +4,7 @@ import { db, storage } from "../firebase";
 import { addDoc, collection, doc, serverTimestamp,  updateDoc,} from "@firebase/firestore";
 import { getDownloadURL, ref, uploadString } from "@firebase/storage";
 import { useSession } from "next-auth/react";
+import Image from "next/image";
 
 
 function Input() {
@@ -58,7 +59,7 @@ function Input() {
         <div
             className={`border-b border-gray-700 p-3  text-white flex space-x-3 overflow-y-auto ${loading && "opacity-60"}`}
         >
-            <img
+            <Image
                 src={session.user.image}
                 alt=""
                 className="h-11 w-11 rounded-full cursor-pointer"
@@ -74,7 +75,7 @@ function Input() {
                             >
                                 <XIcon className="text-white h-5" />
                             </div>
-                            <img
+                            <Image
                                 src={selectedFile}
                                 alt=""
                                 className="rounded-2xl max-h-80 object-contain"

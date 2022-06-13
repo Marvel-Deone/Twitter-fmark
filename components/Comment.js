@@ -5,12 +5,13 @@ import {
     HeartIcon,
     ShareIcon,
   } from "@heroicons/react/outline";
+import Image from "next/image";
   import Moment from "react-moment";
   
   function Comment({ comment }) {
     return (
       <div className="p-3 flex cursor-pointer border-b border-gray-700">
-        <img
+        <Image
           src={comment?.userImg}
           alt=""
           className="h-11 w-11 rounded-full mr-4"

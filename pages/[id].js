@@ -48,7 +48,7 @@ import Login from "../components/Login";
       <div>
         <Head>
           <title>
-            {post?.username} on Twitter: "{post?.text}"
+            {post?.username} on Twitter: {post?.text}
           </title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
