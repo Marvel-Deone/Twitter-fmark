@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/solid";
-import { HashtagIcon, BellIcon, InboxIcon, BookmarkIcon, ClipboardListIcon, UserIcon, DotsCircleHorizontalIcon, DotsHorizontalIcon,} from "@heroicons/react/outline";
+import { HashtagIcon, BellIcon, InboxIcon, BookmarkIcon, ClipboardListIcon, UserIcon, DotsCircleHorizontalIcon, DotsHorizontalIcon,
+} from "@heroicons/react/outline";
 
 import SidebarLink from "./SidebarLink";
 import { useSession } from "next-auth/react";
@@ -11,7 +12,7 @@ function Sidebar() {
     return (
         < div className="flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full">
             <div className="flex items-center justify-center w-14 h-14 hoverAnimation p-0 xl:ml-24">
-                <Image src="https://i.pinimg.com/736x/92/c1/39/92c139945892cd37899e09a345960a96.jpg" alt="Twitter" width={30} height={30} />
+                <Image src="https://i.pinimg.com/736x/92/c1/39/92c139945892cd37899e09a345960a96.jpg" alt="Twitter" width={40} height={40} />
             </div>
             <div className="space-y-1.5 mt-4 mb-2.5 xl:ml-24">
                 <SidebarLink text="Home" Icon={HomeIcon} active />
@@ -28,7 +29,8 @@ function Sidebar() {
             </button>
             <div
                 className="text-[#d9d9d9] flex items-center justify-center mt-auto hoverAnimation xl:ml-auto xl:-mr-5" onClick={signOut}>
-                <Image src={session.user.image} alt="" className="h-10 w-10 rounded-full xl:mr-2.5" />
+                <Image src={session.user.image} alt="" className="rounded-full  h-10 w-10 xl:mr-2.5"  width={45} height={45}
+                />
                 <div className="hidden xl:inline leading-5">
                     <h4 className="font-bold">{session.user.name}</h4>
                     <p className="text-[#6e767d]">@{session.user.tag}</p>

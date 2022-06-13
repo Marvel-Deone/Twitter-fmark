@@ -60,7 +60,7 @@ function Modal() {
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog as="div" className="fixed z-50 inset-0 pt-8" onClose={setIsOpen}>
-        <div className="flex items-start justify-center min-h-[800px] sm:min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div className="flex items-start justify-center min-h-[800px]  min-h-screen pt-4 px-4 pb-20 text-center  block  p-0">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -76,13 +76,13 @@ function Modal() {
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
-            enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enterTo="opacity-100 translate-y-0 sm:scale-100"
+            enterFrom="opacity-0 translate-y-4  translate-y-0  scale-95"
+            enterTo="opacity-100 translate-y-0  scale-100"
             leave="ease-in duration-200"
-            leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-            leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            leaveFrom="opacity-100 translate-y-0  scale-100"
+            leaveTo="opacity-0 translate-y-4  translate-y-0  scale-95"
           >
-            <div className="inline-block align-bottom bg-black rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full">
+            <div className="inline-block align-bottom bg-black rounded-2xl text-left overflow-hidden shadow-xl transform transition-all my-8 align-middle max-w-xl w-full">
             <div className="flex items-center px-1.5 py-2 border-b border-gray-700">
                 <div
                   className="hoverAnimation w-9 h-9 flex items-center justify-center xl:px-0"
@@ -91,40 +91,50 @@ function Modal() {
                   <XIcon className="h-[22px] text-white" />
                 </div>
               </div>
-              <div className="flex px-4 pt-5 pb-2.5 sm:px-6">
+              <div className="flex px-4 pt-5 pb-2.5  px-6">
                 <div className="w-full">
                   <div className="text-[#6e767d] flex gap-x-3 relative">
                     <span className="w-0.5 h-full z-[-1] absolute left-5 top-11 bg-gray-600" />
+                    {/* {!post.userImg ||  post.userImg===""?
+                    null
+                  : 
                     <Image
                       src={post?.userImg}
                       alt=""
-                      className="h-11 w-11 rounded-full"
+                      width={11} height={11}
+                      className="rounded-full h-11 w-11 "
                     />
+                  } */}
                     <div>
                       <div className="inline-block group">
-                        <h4 className="font-bold text-[#d9d9d9] inline-block text-[15px] sm:text-base">
+                        <h4 className="font-bold text-[#d9d9d9] inline-block text-[15px]  text-base">
                           {post?.username}
                         </h4>
-                        <span className="ml-1.5 text-sm sm:text-[15px]">
+                        <span className="ml-1.5 text-sm  text-[15px]">
                           @{post?.tag}{" "}
                         </span>
                       </div>{" "}
                       ·{" "}
-                      <span className="hover:underline text-sm sm:text-[15px]">
+                      <span className="hover:underline text-sm  text-[15px]">
                         <Moment fromNow>{post?.timestamp?.toDate()}</Moment>
                       </span>
-                      <p className="text-[#d9d9d9] text-[15px] sm:text-base">
+                      <p className="text-[#d9d9d9] text-[15px]  text-base">
                         {post?.text}
                       </p>
                     </div>
                   </div>
 
                   <div className="mt-7 flex space-x-3 w-full">
+                  {/* {!session.user.image||  session.user.image===""?
+                    null
+                  : 
                     <Image
                       src={session.user.image}
                       alt=""
-                      className="h-11 w-11 rounded-full"
+                      width={11} height={11}
+                      className="rounded-full h-11 w-11"
                     />
+                } */}
                     <div className="flex-grow mt-2">
                       <textarea
                         value={comment}

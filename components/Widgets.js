@@ -33,13 +33,13 @@ function Widgets({ trendingResults, followResults }) {
             className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-2 cursor-pointer transition duration-200 ease-out flex items-center"
             key={index}
           >
-            <Image
+            {/* <Image
               src={result.userImg}
               width={50}
               height={50}
               objectFit="cover"
-              className="rounded-full" alt=""
-            />
+              className="rounded-full"
+            /> */}
             <div className="ml-4 leading-5 group">
               <h4 className="font-bold group-hover:underline">
                 {result.username}

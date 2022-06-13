@@ -11,11 +11,14 @@ import Image from "next/image";
   function Comment({ comment }) {
     return (
       <div className="p-3 flex cursor-pointer border-b border-gray-700">
-        <Image
+        {/* <Image
           src={comment?.userImg}
+          className=" rounded-full h-11 w-11 mr-4"
+          width={2.75} height={2.75}
           alt=""
-          className="h-11 w-11 rounded-full mr-4"
-        />
+          // h-11 w-11
+         
+        /> */}
         <div className="flex flex-col space-y-2 w-full">
           <div className="flex justify-between">
             <div className="text-[#6e767d]">

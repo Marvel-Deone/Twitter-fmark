@@ -19,7 +19,7 @@ function Trending({ result }) {
         </p>
       </div>
 
-      {result.img ? (
+      {/* {result.img ? (
         <Image
         src={result.img}
         width={70}
@@ -31,7 +31,7 @@ function Trending({ result }) {
           <div className="icon group">
             <DotsHorizontalIcon className="h-5 text-[#6e767d] group-hover:text-[#1d9bf0]" />
           </div>
-        )}
+        )} */}
     </div>
   );
 }

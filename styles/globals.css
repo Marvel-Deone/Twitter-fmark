@@ -12,7 +12,8 @@
   background: #f1f1f1; 
   border-radius: 4px;
 }
- 
+
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888; 
@@ -42,4 +43,13 @@
   .tag {
     @apply text-[#1d9bf0] font-normal hover:underline cursor-pointer;
   }
+  /* .post { */
+    /* height: 600px !important; */
+  /* } */
+  /* .post-logo {
+    min-width: 45px !important;
+    min-height: 45px !important;
+    justify-content: start !important;
+    max-height: 45px; max-width: 45px;
+  } */
 }
