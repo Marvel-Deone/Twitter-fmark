@@ -4,7 +4,7 @@ import Image from "next/image";
 function Login(providers) {
     return (
         <div className="flex flex-col items-center space-y-20 pt-48">
-              {/* <Image src="https://i.pinimg.com/736x/92/c1/39/92c139945892cd37899e09a345960a96.jpg" width={150} height={150} objectFit="contain" alt=""/> */}
+              <Image src="https://i.pinimg.com/736x/92/c1/39/92c139945892cd37899e09a345960a96.jpg" width={150} height={150} objectFit="contain" alt=""/>
 
               <div>
               {Object.values(providers).map((provider) => (   
